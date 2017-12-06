@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="parseui-widget-android-0.0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/8a6ba2d4233459629d99cba1b302b8d0265c89e2/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/8a6ba2d4233459629d99cba1b302b8d0265c89e2/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse/parseui-widget-android/0.0.2/38af6c8ccebe7fd76ee5d4c3d81075fc36a50555/parseui-widget-android-0.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

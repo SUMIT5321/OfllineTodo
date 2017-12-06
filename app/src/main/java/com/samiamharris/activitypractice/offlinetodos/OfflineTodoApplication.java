@@ -20,7 +20,14 @@ public class OfflineTodoApplication extends Application {
 
         ParseObject.registerSubclass(Todo.class);
         Parse.enableLocalDatastore(getApplicationContext());
-        Parse.initialize(this, "Eg3t3spfFsng1u5uBgZcaE7xP8yrAIObzm74koh9", "ESQ4xHZjHAMhK7JAolWAToVXJnN4zZD31OBCffr8");
+//        Parse.initialize(this, "afadf20e-7719-44f7-9f04-bc320011562a", "2p2cbvs9Rt27AcUyjC4NoPWieKZT9tsn");
+        Parse.initialize(new Parse.Configuration.Builder(this)
+                        .applicationId("afadf20e-7719-44f7-9f04-bc320011562a")
+                        .clientKey("2p2cbvs9Rt27AcUyjC4NoPWieKZT9tsn")
+                        .server("https://api.parse.buddy.com/parse/")
+                        .enableLocalDataStore()
+                        .build()
+        );
         ParseUser.enableAutomaticUser();
 
         ParseACL defaultACL = new ParseACL();

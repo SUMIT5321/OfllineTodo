@@ -24,6 +24,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.ui.ParseLoginBuilder;
 
 import java.util.List;
 
@@ -73,9 +74,7 @@ public class ToDoListActivity extends ListActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (!ParseAnonymousUtils.isLinked(ParseUser.getCurrentUser())){
-            syncTodosToParse();
-        }
+        syncTodosToParse();
     }
 
     @Override
@@ -108,10 +107,12 @@ public class ToDoListActivity extends ListActivity {
     }
 
     private void syncTodosToParse() {
+        Log.e(ToDoListActivity.class.getSimpleName(), "inside synctodosToParse");
         ConnectivityManager cm = ((ConnectivityManager)
                 getSystemService((Context.CONNECTIVITY_SERVICE)));
         NetworkInfo ni = cm.getActiveNetworkInfo();
-        if((ni != null) && (ni.isConnected())) {
+        if((ni != null) && (ni.isConnected())) { /* connection available */
+            Log.e(ToDoListActivity.class.getSimpleName(), "inside connection available");
             if(!ParseAnonymousUtils.isLinked(ParseUser.getCurrentUser())) {
                 //if we have a network connection and a current logged in user
                 //sync the todos
